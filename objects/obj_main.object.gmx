@@ -81,37 +81,41 @@ if keyboard_check(vk_shift) {
 }
 
 // Acceleration / Deceleration calculations
-if (movementX * moveX &gt; 0) { // accelerating
+if (movementX * moveX &gt; 0 || (movementX == 0 &amp;&amp; moveX != 0)) { // accelerating
     movementX = min(moveLimit, ( abs(moveX) * acceleration * sprintModifier + abs(movementX) )) * moveX;
 } else if (movementX * moveX &lt; 0) { // decelerating
-    movementX += moveX * sprintModifier;
+    movementX += moveX * deceleration * sprintModifier;
 } else {
-    movementX = max(abs(movementX) - (abs(moveX) * standDeceleration), 0) * moveX;
+    movementX = max(abs(movementX) - standDeceleration, 0) * sign(movementX);
 }
 
-if (movementY * moveY &gt; 0) { // accelerating
+if (movementY * moveY &gt; 0 || (movementY == 0 &amp;&amp; moveY != 0)) { // accelerating
     movementY = min(moveLimit, ( abs(moveY) * acceleration * sprintModifier + abs(movementY) )) * moveY;
 } else if (movementY * moveY &lt; 0) { // decelerating
-    movementY += moveY * sprintModifier;
+    movementY += moveY * deceleration * sprintModifier;
 } else {
-    movementY = max(abs(movementY) - (abs(moveY) * standDeceleration), 0) * moveY;
+    movementY = max(abs(movementY) - standDeceleration, 0) * sign(movementY);
 }
 
 // Move and check for solid collision
 if place_meeting(x + movementX, y, obj_wall) {
     if(moveX &gt; 0){
-        move_contact_solid(0, -1);
+        move_contact_solid(0, moveLimit);
+        movementX = 0;
     }else if(moveX &lt; 0){
-        move_contact_solid(180, -1);
+        move_contact_solid(180, moveLimit);
+        movementX = 0;
     }
 } else {
     x += movementX;
 }
 if place_meeting(x, y + movementY, obj_wall) {
     if(moveY &gt; 0){
-        move_contact_solid(270, -1);
+        move_contact_solid(270, moveLimit);
+        movementY = 0;
     }else if(moveY &lt; 0){
-        move_contact_solid(90, -1);
+        move_contact_solid(90, moveLimit);
+        movementY = 0;
     }
 } else {
     y += movementY;
