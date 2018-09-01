@@ -10,10 +10,15 @@
     <sprite>sprites\spr_main</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_enemy1</sprite>
+    <sprite>sprites\spr_ballbar</sprite>
+    <sprite>sprites\spr_ballselect</sprite>
+    <sprite>sprites\spr_healthbar</sprite>
+    <sprite>sprites\spr_ball_turret_deploy</sprite>
+    <sprite>sprites\spr_ball_trap_deploy</sprite>
+    <sprite>sprites\spr_ball_roll</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <scripts name="scripts"/>
   <objects name="objects">
     <object>objects\test_object</object>
     <object>objects\obj_director</object>
