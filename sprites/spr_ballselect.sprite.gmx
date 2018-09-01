@@ -2,7 +2,7 @@
 <sprite>
   <type>0</type>
   <xorig>136</xorig>
-  <yorigin>0</yorigin>
+  <yorigin>64</yorigin>
   <colkind>1</colkind>
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
@@ -17,7 +17,11 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>32</width>
-  <height>32</height>
-  <frames/>
+  <width>136</width>
+  <height>64</height>
+  <frames>
+    <frame index="0">images\spr_ballselect_0.png</frame>
+    <frame index="1">images\spr_ballselect_1.png</frame>
+    <frame index="2">images\spr_ballselect_2.png</frame>
+  </frames>
 </sprite>
