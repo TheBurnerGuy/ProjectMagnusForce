@@ -6,8 +6,7 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\TestSprite1</sprite>
-    <sprite>sprites\spr_ball</sprite>
+    <sprite>sprites\spr_placeholder</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
