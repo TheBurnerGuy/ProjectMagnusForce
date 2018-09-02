@@ -25,9 +25,34 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hp = 2;
+            <string>event_inherited();
+
+hp = 2;
 
 attacking = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>attacking = false;
 </string>
           </argument>
         </arguments>
@@ -50,15 +75,15 @@ attacking = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var inst_speed = 10;
+            <string>var inst_speed = 12;
 
 if !attacking {
     if instance_exists(obj_main) {
         var main = instance_find(obj_main, 0);
-        mp_potential_step(main.x, main.y, inst_speed, false);
-        if distance_to_point(main.x, main.y) &lt; inst_speed{
+        if !immobile mp_potential_step(main.x, main.y, inst_speed, false);
+        if distance_to_point(main.x, main.y) &lt; inst_speed &amp;&amp; !main.invincible{
             attacking = true;
-            alarm_set(0, 120);
+            alarm_set(0, 70);
             with(main){
                 main_damaged();
             }

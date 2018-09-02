@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hp = 1;
+            <string>event_inherited();
+
+hp = 1;
 
 mode = enemyMode.walk;
 reloadTime = 60;
@@ -82,7 +84,7 @@ if instance_exists(obj_main){
 
 if (mode == enemyMode.walk &amp;&amp; main != noone){
     // Walk
-    mp_potential_step(main.x, main.y, 6, false);
+    if !immobile mp_potential_step(main.x, main.y, 6, false);
     if distance_to_point(main.x, main.y) &lt; 300 {
         mode = enemyMode.attack;
         alarm_set(0, reloadTime);

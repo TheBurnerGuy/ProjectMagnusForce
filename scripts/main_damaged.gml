@@ -6,7 +6,7 @@ if(!invincible){
     global.mainHp -= 1;
     if(global.mainHp > 0){
         alarm_set(0, 15);
-        alarm_set(1, 60);
+        alarm_set(1, 30);
     }
 }
 
