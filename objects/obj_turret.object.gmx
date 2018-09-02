@@ -26,7 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>ammo = 5;
-canShoot = true;
+canShoot = false;
+
+alarm_set(0, 90);
 </string>
           </argument>
         </arguments>
@@ -79,6 +81,11 @@ canShoot = true;
         alarm_set(0, 30);
         instance_create(x, y, obj_bullet);
     }
+}
+
+if (ammo &lt;= 0) {
+    instance_create(x, y, obj_brokenBall);
+    instance_destroy();
 }
 </string>
           </argument>

@@ -19,12 +19,14 @@
     <sprite>sprites\spr_deadEnemy</sprite>
     <sprite>sprites\spr_turret</sprite>
     <sprite>sprites\spr_bullet</sprite>
-	<sprite>sprites\spr_ballbar</sprite>
+    <sprite>sprites\spr_ballbar</sprite>
     <sprite>sprites\spr_ballselect</sprite>
     <sprite>sprites\spr_healthbar</sprite>
     <sprite>sprites\spr_ball_turret_deploy</sprite>
     <sprite>sprites\spr_ball_trap_deploy</sprite>
     <sprite>sprites\spr_ball_roll</sprite>
+    <sprite>sprites\spr_roof</sprite>
+    <sprite>sprites\spr_trigger</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -32,12 +34,14 @@
     <script>scripts\transform_ball.gml</script>
     <script>scripts\script_enum.gml</script>
     <script>scripts\fade_out.gml</script>
+    <script>scripts\main_damaged.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\test_object</object>
     <object>objects\obj_director</object>
     <object>objects\obj_main</object>
     <object>objects\obj_wall</object>
+    <object>objects\obj_roof</object>
     <objects name="Balls">
       <object>objects\obj_ball</object>
       <object>objects\obj_brokenBall</object>
@@ -52,9 +56,18 @@
       <object>objects\obj_enemy3</object>
       <object>objects\obj_enemyBullet</object>
       <object>objects\obj_deadEnemy</object>
+      <object>objects\obj_enemyTrap</object>
+      <object>objects\obj_enemyRoll</object>
+    </objects>
+    <objects name="Encounters">
+      <object>objects\obj_trigger1</object>
+      <object>objects\obj_trigger2</object>
+      <object>objects\obj_tWall1</object>
+      <object>objects\obj_tWall2</object>
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\level1</room>
     <room>rooms\room_test</room>
   </rooms>
   <help>

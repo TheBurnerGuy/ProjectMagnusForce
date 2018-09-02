@@ -1,7 +1,7 @@
 enum ballMode {
-   roll,
-   trap,
-   turret
+   roll = 0,
+   trap = 1,
+   turret = 2
 };
 
 enum enemyMode {

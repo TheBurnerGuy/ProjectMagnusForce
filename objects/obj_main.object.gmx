@@ -30,8 +30,82 @@ life = 100;
 energy = 100;
 movementX = 0;
 movementY = 0;
-currentBallMode = ballMode.roll; // 0 for rolling, 1 for mine, 2 for turret
 invincible = false;
+immobile = false;
+recharging = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// Recharging balls
+global.mainBall += 1;
+recharging = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// Not invincible anymore
+invincible = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// Able to move again
+immobile = false;
 </string>
           </argument>
         </arguments>
@@ -80,6 +154,14 @@ if keyboard_check(ord('S')) {
 }
 if keyboard_check(vk_shift) {
     sprintModifier = 2;
+}
+
+// Immobile trumps all movement attempts
+if (immobile) {
+    moveX = 0;
+    moveY = 0;
+    movementX = 0;
+    movementY = 0;
 }
 
 // Acceleration / Deceleration calculations
@@ -144,20 +226,26 @@ if place_meeting(x, y + movementY, obj_wall) {
             <kind>1</kind>
             <string>// Combat controls
 if keyboard_check(ord('1')) {
-    currentBallMode = ballMode.roll;
+    global.currentBallMode = ballMode.roll;
 }
 if keyboard_check(ord('2')) {
-    currentBallMode = ballMode.trap;
+    global.currentBallMode = ballMode.trap;
 }
 if keyboard_check(ord('3')) {
-    currentBallMode = ballMode.turret;
+    global.currentBallMode = ballMode.turret;
 }
 
-if mouse_check_button_pressed(mb_left) {
+if mouse_check_button_pressed(mb_left) &amp;&amp; !immobile &amp;&amp; global.mainBall &gt; 0{
+    global.mainBall -= 1;
     var newBall = instance_create(x, y, obj_ball);
     with(newBall) {
-        self.mode = other.currentBallMode;
+        self.mode = global.currentBallMode;
     }
+}
+
+if !recharging &amp;&amp; global.mainBall &lt; global.ballLimit {
+    recharging = true;
+    alarm_set(2, 180);
 }
 </string>
           </argument>
