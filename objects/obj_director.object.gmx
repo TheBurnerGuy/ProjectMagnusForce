@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.mainHp = 5;
+            <string>global.mainHp = 3;
 global.mainBall = 3;
 global.ballLimit = 3;
 global.currentBallMode = ballMode.roll;

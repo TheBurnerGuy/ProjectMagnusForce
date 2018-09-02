@@ -71,7 +71,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(hp &lt;= 0){
+            <string>// Generic hp script for all enemies
+if(hp &lt;= 0){
     var deadBody = instance_create(x, y, obj_deadEnemy);
     deadBody.sprite_index = sprite_index;
     deadBody.image_speed = 0;

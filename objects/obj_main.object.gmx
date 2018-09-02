@@ -26,14 +26,15 @@
           <argument>
             <kind>1</kind>
             <string>// Setup instance variables
-life = 100;
 energy = 100;
 energyLimit = 100;
+ballRecharge = 180;
 movementX = 0;
 movementY = 0;
 invincible = false;
 immobile = false;
 recharging = false;
+trip = false;
 </string>
           </argument>
         </arguments>
@@ -107,6 +108,7 @@ invincible = false;
             <kind>1</kind>
             <string>// Able to move again
 immobile = false;
+trip = false;
 </string>
           </argument>
         </arguments>
@@ -171,7 +173,7 @@ if (immobile) {
     moveY = 0;
     movementX = 0;
     movementY = 0;
-    image_alpha = 0.8;
+    image_alpha = 0.6;
 } else {
     image_alpha = 1;
 }
@@ -285,7 +287,7 @@ if mouse_check_button_pressed(mb_left) &amp;&amp; !immobile &amp;&amp; global.ma
 
 if !recharging &amp;&amp; global.mainBall &lt; global.ballLimit {
     recharging = true;
-    alarm_set(2, 150);
+    alarm_set(2, ballRecharge);
 }
 </string>
           </argument>
@@ -312,6 +314,13 @@ if !recharging &amp;&amp; global.mainBall &lt; global.ballLimit {
 
 if (energy &lt; energyLimit){
     energy += energyRecharge;
+}
+
+// Tripped
+if trip {
+    image_angle = 90;
+} else {
+    image_angle = 0;
 }
 </string>
           </argument>

@@ -46,6 +46,7 @@
     <sprite>sprites\spr_enemy1_fire_u</sprite>
     <sprite>sprites\spr_enemy1_fire_d</sprite>
     <sprite>sprites\spr_enemy3_walk_lr</sprite>
+    <sprite>sprites\spr_roof_final</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tileset_lab_wall</background>
@@ -57,6 +58,8 @@
     <script>scripts\script_enum.gml</script>
     <script>scripts\fade_out.gml</script>
     <script>scripts\main_damaged.gml</script>
+    <script>scripts\enemy_trippable.gml</script>
+    <script>scripts\trigger_appear_wall.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\test_object</object>
@@ -83,18 +86,25 @@
       <object>objects\obj_enemyRoll</object>
     </objects>
     <objects name="Encounters">
+      <object>objects\obj_dynamicWall</object>
       <object>objects\obj_trigger1</object>
       <object>objects\obj_trigger2</object>
       <object>objects\obj_trigger3</object>
       <object>objects\obj_trigger4</object>
       <object>objects\obj_trigger5</object>
       <object>objects\obj_trigger6</object>
-      <object>objects\obj_tWall1</object>
-      <object>objects\obj_tWall2</object>
-      <object>objects\obj_tWall3</object>
-      <object>objects\obj_tWall4</object>
-      <object>objects\obj_tWall5</object>
-      <object>objects\obj_tWall6</object>
+      <object>objects\obj_tdWall1</object>
+      <object>objects\obj_tdWall2</object>
+      <object>objects\obj_tdWall3</object>
+      <object>objects\obj_tdWall4</object>
+      <object>objects\obj_tdWall5</object>
+      <object>objects\obj_tdWall6</object>
+      <object>objects\obj_taWall1</object>
+      <object>objects\obj_taWall2</object>
+      <object>objects\obj_taWall3</object>
+      <object>objects\obj_taWall4</object>
+      <object>objects\obj_taWall5</object>
+      <object>objects\obj_taWall6</object>
     </objects>
     <objects name="Director">
       <object>objects\obj_fadeIn</object>
@@ -104,7 +114,9 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_level1</room>
+    <room>rooms\room_level2</room>
     <room>rooms\room_test</room>
+    <room>rooms\room_starter</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

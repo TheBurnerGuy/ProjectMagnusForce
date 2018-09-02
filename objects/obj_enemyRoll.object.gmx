@@ -28,8 +28,8 @@
             <string>var main = instance_find(obj_main, 0);
 
 direction = point_direction(x, y, main.x, main.y);
-speed = 8;
-alarm_set(0, 25);
+speed = 18;
+alarm_set(0, 45);
 </string>
           </argument>
         </arguments>
@@ -78,8 +78,8 @@ instance_destroy();
             <kind>1</kind>
             <string>with(other){
     if !self.invincible &amp;&amp; !self.immobile {
-        self.immobile = true;
-        alarm_set(0, 15);
+        self.trip = true;
+        main_damaged();
     }
 }
 </string>

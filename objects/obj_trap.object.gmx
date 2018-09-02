@@ -89,8 +89,7 @@ image_index = image_number - 1;
             <string>if (activated) {
     instance_create(x, y, obj_brokenBall);
     with(other){
-        instance_create(self.x, self.y, obj_deadEnemy);
-        instance_destroy();
+        hp -= 2;
     }
     instance_destroy();
 }

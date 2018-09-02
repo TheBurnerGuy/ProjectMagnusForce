@@ -86,7 +86,7 @@ if (mode == enemyMode.walk &amp;&amp; main != noone){
     if !immobile mp_potential_step(main.x, main.y, 6, false);
     if distance_to_point(main.x, main.y) &lt; 300 {
         mode = enemyMode.attack;
-        alarm_set(0, reloadTime);
+        alarm_set(0, 10); // Set off repeatable attacks
     }
 } else if (mode == enemyMode.attack &amp;&amp; main != noone){
     // Attack
@@ -143,6 +143,46 @@ if mode == enemyMode.walk {
     }
 }
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>enemy_trippable</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
