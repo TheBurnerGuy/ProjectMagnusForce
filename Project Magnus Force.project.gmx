@@ -30,8 +30,13 @@
     <sprite>sprites\spr_main_walk_lr</sprite>
     <sprite>sprites\spr_main_walk2_lr</sprite>
     <sprite>sprites\spr_goal</sprite>
+    <sprite>sprites\spr_main_walk_u</sprite>
+    <sprite>sprites\spr_main_walk_d</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\tileset_lab_wall</background>
+    <background>background\tileset_lab_floor</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\transform_ball.gml</script>
