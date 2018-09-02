@@ -37,12 +37,15 @@
     <sprite>sprites\spr_fadeOut</sprite>
     <sprite>sprites\spr_main_dead_bullet</sprite>
     <sprite>sprites\spr_main_dead_fallen</sprite>
-    <sprite>sprites\spr_enemy1_walk_lr</sprite>
+    <sprite>sprites\spr_enemy1_walk_r</sprite>
+    <sprite>sprites\spr_enemy1_walk_l</sprite>
     <sprite>sprites\spr_enemy1_walk_d</sprite>
     <sprite>sprites\spr_enemy1_walk_u</sprite>
-    <sprite>sprites\spr_enemy1_fire_lr</sprite>
+    <sprite>sprites\spr_enemy1_fire_r</sprite>
+    <sprite>sprites\spr_enemy1_fire_l</sprite>
     <sprite>sprites\spr_enemy1_fire_u</sprite>
     <sprite>sprites\spr_enemy1_fire_d</sprite>
+    <sprite>sprites\spr_enemy3_walk_lr</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tileset_lab_wall</background>
@@ -97,6 +100,7 @@
       <object>objects\obj_fadeIn</object>
       <object>objects\obj_fadeOut</object>
     </objects>
+    <object>objects\obj_lamefinish</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_level1</room>

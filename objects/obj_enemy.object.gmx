@@ -72,7 +72,10 @@
           <argument>
             <kind>1</kind>
             <string>if(hp &lt;= 0){
-    instance_create(x, y, obj_deadEnemy);
+    var deadBody = instance_create(x, y, obj_deadEnemy);
+    deadBody.sprite_index = sprite_index;
+    deadBody.image_speed = 0;
+    deadBody.image_angle = 90;
     instance_destroy();
 }
 </string>
