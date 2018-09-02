@@ -19,6 +19,12 @@
     <sprite>sprites\spr_deadEnemy</sprite>
     <sprite>sprites\spr_turret</sprite>
     <sprite>sprites\spr_bullet</sprite>
+	<sprite>sprites\spr_ballbar</sprite>
+    <sprite>sprites\spr_ballselect</sprite>
+    <sprite>sprites\spr_healthbar</sprite>
+    <sprite>sprites\spr_ball_turret_deploy</sprite>
+    <sprite>sprites\spr_ball_trap_deploy</sprite>
+    <sprite>sprites\spr_ball_roll</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
