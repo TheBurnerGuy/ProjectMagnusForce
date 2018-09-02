@@ -31,6 +31,11 @@
     <sprite>sprites\spr_main_walk2_lr</sprite>
     <sprite>sprites\spr_main_walk_u</sprite>
     <sprite>sprites\spr_main_walk_d</sprite>
+    <sprite>sprites\spr_main_dead_bullet</sprite>
+    <sprite>sprites\spr_main_dead_fallen</sprite>
+    <sprite>sprites\spr_enemy1_walk_lr</sprite>
+    <sprite>sprites\spr_enemy1_walk_d</sprite>
+    <sprite>sprites\spr_enemy1_walk_u</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tileset_lab_wall</background>
