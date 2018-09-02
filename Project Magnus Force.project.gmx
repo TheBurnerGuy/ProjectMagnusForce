@@ -27,6 +27,8 @@
     <sprite>sprites\spr_ball_roll</sprite>
     <sprite>sprites\spr_roof</sprite>
     <sprite>sprites\spr_trigger</sprite>
+    <sprite>sprites\spr_main_walk_lr</sprite>
+    <sprite>sprites\spr_main_walk2_lr</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
