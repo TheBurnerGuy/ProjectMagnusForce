@@ -29,6 +29,8 @@
     <sprite>sprites\spr_trigger</sprite>
     <sprite>sprites\spr_main_walk_lr</sprite>
     <sprite>sprites\spr_main_walk2_lr</sprite>
+    <sprite>sprites\spr_main_walk_u</sprite>
+    <sprite>sprites\spr_main_walk_d</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tileset_lab_wall</background>
