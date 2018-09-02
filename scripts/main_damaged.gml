@@ -7,6 +7,8 @@ if(!invincible){
     if(global.mainHp > 0){
         alarm_set(0, 15);
         alarm_set(1, 30);
+    } else {
+        instance_create(x, y, obj_fadeOut);    
     }
 }
 

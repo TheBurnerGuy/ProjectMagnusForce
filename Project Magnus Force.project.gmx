@@ -27,11 +27,14 @@
     <sprite>sprites\spr_ball_roll</sprite>
     <sprite>sprites\spr_roof</sprite>
     <sprite>sprites\spr_trigger</sprite>
-    <sprite>sprites\spr_main_walk_lr</sprite>
-    <sprite>sprites\spr_main_walk2_lr</sprite>
     <sprite>sprites\spr_goal</sprite>
+    <sprite>sprites\spr_main_walk_r</sprite>
+    <sprite>sprites\spr_main_walk_l</sprite>
+    <sprite>sprites\spr_main_walk2_lr</sprite>
     <sprite>sprites\spr_main_walk_u</sprite>
     <sprite>sprites\spr_main_walk_d</sprite>
+    <sprite>sprites\spr_fadeIn</sprite>
+    <sprite>sprites\spr_fadeOut</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tileset_lab_wall</background>
@@ -50,6 +53,7 @@
     <object>objects\obj_main</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_roof</object>
+    <object>objects\obj_goal</object>
     <objects name="Balls">
       <object>objects\obj_ball</object>
       <object>objects\obj_brokenBall</object>
@@ -81,10 +85,13 @@
       <object>objects\obj_tWall5</object>
       <object>objects\obj_tWall6</object>
     </objects>
-    <object>objects\obj_goal</object>
+    <objects name="Director">
+      <object>objects\obj_fadeIn</object>
+      <object>objects\obj_fadeOut</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\level1</room>
+    <room>rooms\room_level1</room>
     <room>rooms\room_test</room>
   </rooms>
   <help>

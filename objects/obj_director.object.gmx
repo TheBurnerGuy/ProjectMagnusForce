@@ -29,6 +29,8 @@
 global.mainBall = 3;
 global.ballLimit = 3;
 global.currentBallMode = ballMode.roll;
+
+instance_create(x, y, obj_fadeIn);
 </string>
           </argument>
         </arguments>
