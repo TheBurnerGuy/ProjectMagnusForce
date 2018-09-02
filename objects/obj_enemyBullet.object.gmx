@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>if(instance_exists(obj_main)){
     var main = instance_find(obj_main, 0);
-    speed = 20;
+    speed = 27;
     direction = point_direction(x, y, main.x, main.y);
 } else {
     instance_destroy();

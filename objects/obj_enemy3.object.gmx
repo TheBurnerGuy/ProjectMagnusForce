@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hp = 2;
+            <string>event_inherited();
+
+hp = 2;
 
 attacking = false;
 </string>

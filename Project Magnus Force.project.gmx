@@ -29,6 +29,7 @@
     <sprite>sprites\spr_trigger</sprite>
     <sprite>sprites\spr_main_walk_lr</sprite>
     <sprite>sprites\spr_main_walk2_lr</sprite>
+    <sprite>sprites\spr_goal</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -64,9 +65,18 @@
     <objects name="Encounters">
       <object>objects\obj_trigger1</object>
       <object>objects\obj_trigger2</object>
+      <object>objects\obj_trigger3</object>
+      <object>objects\obj_trigger4</object>
+      <object>objects\obj_trigger5</object>
+      <object>objects\obj_trigger6</object>
       <object>objects\obj_tWall1</object>
       <object>objects\obj_tWall2</object>
+      <object>objects\obj_tWall3</object>
+      <object>objects\obj_tWall4</object>
+      <object>objects\obj_tWall5</object>
+      <object>objects\obj_tWall6</object>
     </objects>
+    <object>objects\obj_goal</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\level1</room>

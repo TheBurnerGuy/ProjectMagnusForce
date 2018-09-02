@@ -134,6 +134,7 @@ var deceleration = 2;
 var standDeceleration = 0.5;
 var sprintModifier = 1; // boolean for sprinting
 var moveLimit = 10;
+var energyRecharge = 4;
 
 // Movement variables
 var moveX = 0;
@@ -153,7 +154,11 @@ if keyboard_check(ord('S')) {
     moveY += 1;
 }
 if keyboard_check(vk_shift) {
-    sprintModifier = 2;
+    if(energy &gt; 0){
+        energy -= 8;
+        sprintModifier = 2;
+        moveLimit = 15;
+    }
 }
 
 // Immobile trumps all movement attempts
@@ -204,6 +209,9 @@ if place_meeting(x, y + movementY, obj_wall) {
 } else {
     y += movementY;
 }
+
+// Energy recharge
+energy += energyRecharge;
 </string>
           </argument>
         </arguments>
