@@ -10,16 +10,43 @@
     <sprite>sprites\spr_main</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_enemy1</sprite>
+    <sprite>sprites\spr_enemy2</sprite>
+    <sprite>sprites\spr_enemy3</sprite>
+    <sprite>sprites\spr_ball</sprite>
+    <sprite>sprites\spr_brokenBall</sprite>
+    <sprite>sprites\spr_enemyBullet</sprite>
+    <sprite>sprites\spr_trap</sprite>
+    <sprite>sprites\spr_deadEnemy</sprite>
+    <sprite>sprites\spr_turret</sprite>
+    <sprite>sprites\spr_bullet</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <scripts name="scripts"/>
+  <scripts name="scripts">
+    <script>scripts\transform_ball.gml</script>
+    <script>scripts\script_enum.gml</script>
+    <script>scripts\fade_out.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\test_object</object>
     <object>objects\obj_director</object>
     <object>objects\obj_main</object>
     <object>objects\obj_wall</object>
-    <object>objects\obj_enemy1</object>
+    <objects name="Balls">
+      <object>objects\obj_ball</object>
+      <object>objects\obj_brokenBall</object>
+      <object>objects\obj_trap</object>
+      <object>objects\obj_turret</object>
+      <object>objects\obj_bullet</object>
+    </objects>
+    <objects name="Enemies">
+      <object>objects\obj_enemy</object>
+      <object>objects\obj_enemy1</object>
+      <object>objects\obj_enemy2</object>
+      <object>objects\obj_enemy3</object>
+      <object>objects\obj_enemyBullet</object>
+      <object>objects\obj_deadEnemy</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_test</room>
